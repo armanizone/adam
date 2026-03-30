@@ -101,8 +101,7 @@ export default function Community() {
                 {t("community.tgDesc")}
               </p>
               <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#1a56db] gap-2"
+                className="border-white hover:bg-white hover:text-[#1a56db] gap-2"
               >
                 <Send className="w-4 h-4" />
                 {t("community.tgCta")}

@@ -115,7 +115,7 @@ function Countdown() {
         ))}
       </div>
 
-      <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#1a56db] font-semibold">
+      <Button className="border-white hover:bg-white hover:text-[#1a56db] font-semibold">
         {t("events.register")}
       </Button>
     </div>
