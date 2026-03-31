@@ -14,7 +14,8 @@ export default function Navbar() {
 
   const navLabels = t("navbar.links", { returnObjects: true });
   const navHrefs = ["#home", "#about", "#housing", "#culture", "#healthcare", "#events", "#community", "#contact"];
-  const navLinks = navLabels.map((label, index) => ({ label, href: navHrefs[index] }));
+  const labels = Array.isArray(navLabels) ? navLabels : navHrefs.map((href) => href.replace("#", ""));
+  const navLinks = labels.map((label, index) => ({ label, href: navHrefs[index] }));
   const langs = [
     { code: "en", label: t("languages.en") },
     { code: "ru", label: t("languages.ru") },

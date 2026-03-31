@@ -2,11 +2,15 @@
 
 import { I18nextProvider } from "react-i18next";
 import { useEffect } from "react";
-import i18n from "@/lib/i18n";
+import i18n from "../lib/i18n";
 
 export default function I18nProvider({ children }) {
   useEffect(() => {
     document.documentElement.lang = i18n.language;
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
   }, []);
 
   useEffect(() => {

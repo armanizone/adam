@@ -1,14 +1,36 @@
 "use client";
 
-import { Send, Instagram, MessageCircle, Heart } from "lucide-react";
+import { Send, Instagram, MessageCircle, Heart, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const footerUrlsRaw = t("footer.urls", { returnObjects: true });
+  const footerUrls =
+    footerUrlsRaw && typeof footerUrlsRaw === "object" ? footerUrlsRaw : {};
+
   const footerLinks = {
     [t("footer.resources")]: t("footer.links1", { returnObjects: true }),
     [t("footer.community")]: t("footer.links2", { returnObjects: true }),
     [t("footer.about")]: t("footer.links3", { returnObjects: true }),
+  };
+  const fallbackUrl = "https://google.com";
+
+  const resolveUrl = (key) => footerUrls[key] || fallbackUrl;
+  const resolveFooterHref = (link) => {
+    const normalized = String(link).toLowerCase();
+    if (normalized.includes("telegram")) return resolveUrl("telegram");
+    if (normalized.includes("instagram")) return resolveUrl("instagram");
+    if (normalized.includes("whatsapp")) return resolveUrl("whatsapp");
+    if (
+      normalized.includes("web") ||
+      normalized.includes("contact") ||
+      normalized.includes("контакт") ||
+      normalized.includes("байланыс")
+    ) {
+      return resolveUrl("web");
+    }
+    return fallbackUrl;
   };
 
   return (
@@ -33,22 +55,36 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="google.com"
+                href={resolveUrl("telegram")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 bg-white/10 hover:bg-[#1a56db] rounded-lg flex items-center justify-center transition-colors"
               >
                 <Send className="w-4 h-4" />
               </a>
               <a
-                href="https://www.instagram.com/adam.kz/"
+                href={resolveUrl("instagram")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 bg-white/10 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/77777777777"
+                href={resolveUrl("whatsapp")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 bg-white/10 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
+              </a>
+              <a
+                href={resolveUrl("web")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 hover:bg-cyan-500 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <Globe className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -66,7 +102,9 @@ export default function Footer() {
                 {links.map((link) => (
                   <li key={link}>
                     <a
-                      href="google.com"
+                      href={resolveFooterHref(link)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-white/45 hover:text-[#10b981] text-sm transition-colors"
                     >
                       {link}

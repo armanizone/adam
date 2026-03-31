@@ -9,23 +9,20 @@ const socials = [
   {
     icon: Send,
     label: "Telegram",
-    handle: "@adam_kazakhstan",
     color: "bg-blue-500",
-    link: "#",
+    link: "https://t.me/adaptationmodule",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    handle: "@adam.kz",
     color: "bg-gradient-to-tr from-pink-500 to-orange-400",
-    link: "#",
+    link: "https://www.instagram.com/adam.turan_/",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    handle: "ADAM Group",
     color: "bg-green-500",
-    link: "#",
+    link: "https://wa.me/77077888677",
   },
 ];
 
@@ -100,12 +97,26 @@ export default function Community() {
               <p className="text-white/75 leading-relaxed mb-8">
                 {t("community.tgDesc")}
               </p>
-              <Button
-                className="border-white hover:bg-white hover:text-[#1a56db] gap-2"
+              <a
+                href={t("community.tgLink")}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Send className="w-4 h-4" />
-                {t("community.tgCta")}
-              </Button>
+                <Button className="border-white hover:bg-white hover:text-[#1a56db] gap-2 md:mr-4">
+                  <Send className="w-4 h-4" />
+                  {t("community.tgCta")}
+                </Button>
+              </a>
+              <a
+                href={t("community.tgLink2")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="border-white hover:bg-white hover:text-[#1a56db] gap-2 md:mt-0 mt-4">
+                  <Send className="w-4 h-4" />
+                  {t("community.tgCta2")}
+                </Button>
+              </a>
             </div>
             <div className="relative rounded-2xl overflow-hidden h-52">
               <Image
@@ -126,6 +137,8 @@ export default function Community() {
               <a
                 key={i}
                 href={s.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white rounded-full px-4 py-2 text-sm font-medium transition-colors"
               >
                 <s.icon className="w-4 h-4" />

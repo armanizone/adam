@@ -56,7 +56,7 @@ const pastEvents = [
 
 function Countdown() {
   const { t } = useTranslation();
-  const target = new Date("2026-04-05T15:00:00");
+  const target = new Date("2026-04-28T00:00:00");
   const [time, setTime] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
 
   useEffect(() => {
@@ -96,10 +96,10 @@ function Countdown() {
         className="text-2xl sm:text-3xl font-bold mb-1"
         style={{ fontFamily: "Syne, sans-serif" }}
       >
-        Welcome Week Spring 2026
+        Spring Event 2026
       </h3>
       <p className="text-white/70 text-sm mb-8">
-        March 15, 2026 · University Main Hall
+        April 28, 2026
       </p>
 
       <div className="flex items-center justify-center gap-4 mb-8">
