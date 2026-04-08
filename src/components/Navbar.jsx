@@ -13,9 +13,23 @@ export default function Navbar() {
   const { t, i18n } = useTranslation();
 
   const navLabels = t("navbar.links", { returnObjects: true });
-  const navHrefs = ["#home", "#about", "#housing", "#culture", "#healthcare", "#events", "#community", "#contact"];
-  const labels = Array.isArray(navLabels) ? navLabels : navHrefs.map((href) => href.replace("#", ""));
-  const navLinks = labels.map((label, index) => ({ label, href: navHrefs[index] }));
+  const navHrefs = [
+    "#home",
+    "#about",
+    "#housing",
+    "#culture",
+    "#healthcare",
+    "#events",
+    "#community",
+    "#contact",
+  ];
+  const labels = Array.isArray(navLabels)
+    ? navLabels
+    : navHrefs.map((href) => href.replace("#", ""));
+  const navLinks = labels.map((label, index) => ({
+    label,
+    href: navHrefs[index],
+  }));
   const langs = [
     { code: "en", label: t("languages.en") },
     { code: "ru", label: t("languages.ru") },
@@ -39,7 +53,7 @@ export default function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-4"
+          : "bg-transparent py-4",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,12 +61,14 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 bg-[#1a56db] rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-xs tracking-wider">A</span>
+              <span className="text-white font-bold text-xs tracking-wider">
+                A
+              </span>
             </div>
             <span
               className={cn(
                 "font-bold text-lg tracking-wide transition-colors",
-                scrolled ? "text-gray-900" : "text-white"
+                scrolled ? "text-gray-900" : "text-white",
               )}
               style={{ fontFamily: "Syne, sans-serif" }}
             >
@@ -70,7 +86,7 @@ export default function Navbar() {
                   "px-3 py-2 text-sm font-medium rounded-lg transition-colors",
                   scrolled
                     ? "text-gray-600 hover:text-[#1a56db] hover:bg-blue-50"
-                    : "text-white/85 hover:text-white hover:bg-white/10"
+                    : "text-white/85 hover:text-white hover:bg-white/10",
                 )}
               >
                 {link.label}
@@ -84,7 +100,9 @@ export default function Navbar() {
               <button
                 className={cn(
                   "flex items-center gap-1.5 text-sm font-medium transition-colors",
-                  scrolled ? "text-gray-600 hover:text-[#1a56db]" : "text-white/85 hover:text-white"
+                  scrolled
+                    ? "text-gray-600 hover:text-[#1a56db]"
+                    : "text-white/85 hover:text-white",
                 )}
                 onClick={() => setLangOpen((prev) => !prev)}
               >
@@ -99,7 +117,9 @@ export default function Navbar() {
                       onClick={() => changeLanguage(lang.code)}
                       className={cn(
                         "w-full text-left px-3 py-2 rounded-lg text-sm",
-                        i18n.language === lang.code ? "bg-blue-50 text-[#1a56db]" : "text-gray-700 hover:bg-gray-50"
+                        i18n.language === lang.code
+                          ? "bg-blue-50 text-[#1a56db]"
+                          : "text-gray-700 hover:bg-gray-50",
                       )}
                     >
                       {lang.label}
@@ -111,7 +131,11 @@ export default function Navbar() {
             <Button
               size="sm"
               className="gap-2"
-              onClick={() => document.getElementById("community")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById("community")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               <Users className="w-3.5 h-3.5" />
               {t("navbar.join")}
@@ -122,7 +146,9 @@ export default function Navbar() {
           <button
             className={cn(
               "lg:hidden p-2 rounded-lg transition-colors",
-              scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white hover:bg-white/10"
+              scrolled
+                ? "text-gray-700 hover:bg-gray-100"
+                : "text-white hover:bg-white/10",
             )}
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -151,7 +177,9 @@ export default function Navbar() {
                     onClick={() => changeLanguage(lang.code)}
                     className={cn(
                       "px-3 py-1.5 rounded-lg text-xs font-medium",
-                      i18n.language === lang.code ? "bg-blue-50 text-[#1a56db]" : "bg-gray-100 text-gray-700"
+                      i18n.language === lang.code
+                        ? "bg-blue-50 text-[#1a56db]"
+                        : "bg-gray-100 text-gray-700",
                     )}
                   >
                     {lang.code.toUpperCase()}

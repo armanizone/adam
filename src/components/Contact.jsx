@@ -67,7 +67,7 @@ export default function Contact() {
                     <input
                       type="text"
                       required
-                      placeholder="John Doe"
+                      placeholder={t("contact.yourName")}
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
                       className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a56db]/30 focus:border-[#1a56db] transition-colors"
@@ -83,7 +83,7 @@ export default function Contact() {
                     <input
                       type="email"
                       required
-                      placeholder="john@example.com"
+                      placeholder={t("contact.email")}
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a56db]/30 focus:border-[#1a56db] transition-colors"
@@ -101,7 +101,7 @@ export default function Contact() {
                   <textarea
                     required
                     rows={5}
-                    placeholder="Tell us how we can help..."
+                    placeholder={t("contact.message")}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1a56db]/30 focus:border-[#1a56db] transition-colors resize-none"

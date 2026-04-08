@@ -44,19 +44,19 @@ const resources = {
         helpItems: [
           {
             title: "International Students",
-            desc: "Students from abroad starting their journey in Kazakhstan",
-          },
-          {
-            title: "Exchange Students",
-            desc: "Short-term exchange program participants",
+            desc: "Newcomers who have just arrived and are looking for information, support, and help with adaptation.",
           },
           {
             title: "Non-Local Students",
-            desc: "Students from other regions of Kazakhstan",
+            desc: "Students from other regions of Kazakhstan who need help with housing, healthcare, and navigating life in a new city.",
           },
           {
             title: "Local Students",
-            desc: "Kazakh students helping and connecting with peers",
+            desc: "Those who want to meet international students, participate in events, and help new community members.",
+          },
+          {
+            title: "All students looking for a community",
+            desc: "Find friends, exchange experiences, and feel like a part of the student community.",
           },
         ],
       },
@@ -80,7 +80,7 @@ const resources = {
             desc: "Always sign a rental contract. Check utilities included. Prefer areas near public transport. Ask local students for neighborhood recommendations.",
           },
         ],
-        cta: "Download Housing Guide",
+        cta: "Go and see the guide",
         value: "Best Value",
         valueText: "Dormitory spots from",
       },
@@ -195,10 +195,10 @@ const resources = {
         badge: "Community",
         title: "Join Our Growing Community",
         description:
-          "Connect with hundreds of students, share experiences, and get instant support.",
+          "Connect with fellow students, share your experiences, and get support in any situation.",
         tgTitle: "Telegram Community",
         tgDesc:
-          "Our Telegram group is the heart of ADAM. Get real-time updates, ask questions, find roommates, and connect with students from around the world.",
+          "On Telegram, you will find all the necessary information about life in Kazakhstan: from culture and traditions to healthcare and housing matters.",
         tgCta: "Join Telegram Group",
         tgCta2: "Join Telegram Bot",
         tgLink: "https://t.me/adaptationmodule",
@@ -207,15 +207,15 @@ const resources = {
         testimonials: [
           {
             from: "from Turkey",
-            text: "ADAM helped me find an apartment and understand the medical system. I felt supported from day one!",
+            text: "A trip to Oi-Qaragai was a perfect escape from the city for me. The beautiful nature, fresh air, and friendly atmosphere made it an unforgettable experience. While there, I met some local students; we’ve stayed in touch and now see each other at the university. One of them is even helping me adapt to local life.",
           },
           {
             from: "from Egypt",
-            text: "The events organized by ADAM are amazing. I made so many friends and learned about Kazakh culture.",
+            text: "The Telegram community has become my anchor in a new country. Here, I not only found useful information about life in Kazakhstan but also met people who are easy and pleasant to talk to. Thanks to this chat, my adaptation was much faster, and I truly felt like a part of the student community.",
           },
           {
             from: "from China",
-            text: "The Telegram community is very active. Whenever I had a question, someone always helped within minutes.",
+            text: "The Nauryz trip to the ethno-village was an unforgettable experience for me. We witnessed traditional rituals, tasted kumys and baursaks, and even went horseback riding. This event helped me dive deeper into the culture of Kazakhstan and see the country through a different lens.",
           },
         ],
       },
@@ -304,19 +304,19 @@ const resources = {
         helpItems: [
           {
             title: "Иностранные студенты",
-            desc: "Студенты из-за рубежа, начинающие путь в Казахстане",
-          },
-          {
-            title: "Студенты по обмену",
-            desc: "Участники краткосрочных программ обмена",
+            desc: "Новички, которые только приехали и ищут информацию, поддержку и помощь в адаптации.",
           },
           {
             title: "Студенты из других регионов",
-            desc: "Студенты из регионов Казахстана",
+            desc: "Студенты из других регионов Казахстана, которым нужна помощь с жильем, медициной и жизнью в новом городе.",
           },
           {
             title: "Местные студенты",
-            desc: "Казахстанские студенты, которые помогают и объединяют",
+            desc: "Те, кто хочет познакомиться с иностранными студентами, участвовать в мероприятиях и помогать новым участникам комьюнити.",
+          },
+          {
+            title: "Все студенты, ищущие сообщество",
+            desc: "Находить друзей, обмениваться опытом и чувствовать себя частью студенческой среды.",
           },
         ],
       },
@@ -340,7 +340,7 @@ const resources = {
             desc: "Всегда подписывайте договор аренды и выбирайте районы рядом с транспортом.",
           },
         ],
-        cta: "Скачать гид по жилью",
+        cta: "Перейти к гиду",
         value: "Лучшая цена",
         valueText: "Места в общежитии от",
       },
@@ -361,7 +361,7 @@ const resources = {
           {
             label: "Еда",
             title: "Казахская кухня",
-            content: "Попробуйте бешбармак, манты, самсу и казы.",
+            content: `Казахская кухня основана на мясе (бешбармак, казы, куырдак), тесте (баурсаки, шелпек) и кисломолочных продуктах (кумыс, курт). Она отличается высокой калорийностью и акцентом на гостеприимство, где каждое блюдо имеет свою ритуальную значимость.`,
             highlight: "Обязательно: бешбармак и манты",
           },
           {
@@ -449,10 +449,11 @@ const resources = {
       community: {
         badge: "Сообщество",
         title: "Присоединяйтесь к нашему сообществу",
-        description: "Общайтесь со студентами и получайте поддержку.",
+        description:
+          "Общайтесь с другими студентами, делитесь опытом и получайте поддержку в любой ситуации.",
         tgTitle: "Telegram-сообщество",
         tgDesc:
-          "В Telegram вы получите быстрые обновления, ответы и новые знакомства.",
+          "В Telegram вы найдете всю необходимую информацию о жизни в Казахстане: от культуры и традиций до вопросов медицины и проживания.",
         tgCta: "Вступить в Telegram",
         tgCta2: "Написать Телеграм боту",
         tgLink: "https://t.me/adaptationmodule",
@@ -461,15 +462,15 @@ const resources = {
         testimonials: [
           {
             from: "из Турции",
-            text: "ADAM помог мне с жильем и медициной. Я чувствовала поддержку с первого дня!",
+            text: "Поездка в Oi-Qaragai стала для меня отличным отдыхом от города. Красивая природа, свежий воздух и дружелюбная атмосфера сделали этот опыт незабываемым. Там я познакомился с местными студентами, теперь мы хорошо общаемся, поддерживаем связь в университете, и один из них помогает мне адаптироваться.",
           },
           {
             from: "из Египта",
-            text: "События ADAM отличные. Я нашел много друзей и узнал культуру Казахстана.",
+            text: "Telegram-сообщество стало для меня точкой опоры в новой стране. Здесь я не только получил полезную информацию о жизни в Казахстане, но и нашёл людей, с которыми легко и приятно общаться. Благодаря этому чату адаптация прошла намного быстрее, и я почувствовал себя частью студенческой среды.",
           },
           {
             from: "из Китая",
-            text: "Сообщество в Telegram очень активное и всегда помогает.",
+            text: "Поездка на Наурыз в этно-аул стала для меня незабываемым опытом. Мы увидели традиционные обряды, попробовали кумыс и баурсаки, а ещё покатались на конях. Это мероприятие помогло глубже погрузиться в культуру Казахстана и увидеть страну другими глазами.",
           },
         ],
       },
@@ -557,19 +558,19 @@ const resources = {
         helpItems: [
           {
             title: "Шетелдік студенттер",
-            desc: "Қазақстанға келген шетелдік студенттер",
-          },
-          {
-            title: "Алмасу студенттері",
-            desc: "Қысқа мерзімді алмасу бағдарламасы",
+            desc: "Елге жаңадан келген және ақпарат, қолдау мен бейімделуге көмек іздеп жүрген жастар.",
           },
           {
             title: "Өзге өңір студенттері",
-            desc: "Қазақстанның басқа өңірлерінен келген студенттер",
+            desc: "Тұрғын үй, медицина және жаңа қаладағы өмірге қатысты көмек қажет ететін Қазақстанның басқа өңірлерінен келген студенттер.",
           },
           {
             title: "Жергілікті студенттер",
-            desc: "Басқаларға қолдау көрсететін қазақстандық студенттер",
+            desc: "Шетелдік студенттермен танысқысы келетін, іс-шараларға қатысып, қоғамдастықтың жаңа мүшелеріне көмектескісі келетін жастар.",
+          },
+          {
+            title: "Қоғамдастық іздеп жүрген барлық студенттер",
+            desc: "Достар табу, тәжірибе бөлісу және өзіңді студенттік ортаның бір бөлігі ретінде сезіну.",
           },
         ],
       },
@@ -614,7 +615,8 @@ const resources = {
           {
             label: "Тағам",
             title: "Қазақ асханасы",
-            content: "Бесбармақ, манты, самса және қазыны татып көріңіз.",
+            content:
+              "Қазақ асханасы ет (бешбармақ, қазы, қуырдақ), қамыр (бауырсақ, шелпек) және сүт өнімдеріне (қымыз, құрт) негізделген. Ол жоғары құнарлылығымен және қонақжайлылыққа бағытталған ерекше салт-дәстүрлерімен ерекшеленеді.",
             highlight: "Міндетті: бесбармақ пен манты",
           },
           {
@@ -702,10 +704,11 @@ const resources = {
       community: {
         badge: "Қауымдастық",
         title: "Өсіп жатқан қауымдастыққа қосылыңыз",
-        description: "Студенттермен байланысып, жедел қолдау алыңыз.",
+        description:
+          "Басқа студенттермен араласыңыз, тәжірибе бөлісіңіз және кез келген жағдайда қолдау алыңыз. байланысып, жедел қолдау алыңыз.",
         tgTitle: "Telegram қауымдастығы",
         tgDesc:
-          "Telegram тобында жаңалықтар, жауаптар және жаңа таныстықтар бар.",
+          "Telegram-нан Қазақстандағы өмір туралы барлық қажетті ақпаратты таба аласыз: мәдениет пен салт-дәстүрден бастап, медицина және тұрғылықты жер мәселелеріне дейін.",
         tgCta: "Telegram тобына қосылу",
         tgCta2: "Telegram ботына хабарлама жіберу",
         tgLink: "https://t.me/adaptationmodule",
@@ -714,15 +717,15 @@ const resources = {
         testimonials: [
           {
             from: "Түркиядан",
-            text: "ADAM маған пәтер тауып, медицина жүйесін түсінуге көмектесті.",
+            text: "Oi-Qaragai-ға сапар мен үшін қала қарбаласынан демалудың тамаша мүмкіндігі болды. Әсем табиғат, таза ауа және достық атмосфера бұл демалысты ұмытылмастай етті. Ол жерде мен жергілікті студенттермен таныстым, қазір біз жақсы араласамыз, университетте де байланыстамыз, тіпті олардың бірі маған бейімделуге көмектесіп жүр.",
           },
           {
             from: "Египеттен",
-            text: "ADAM іс-шаралары керемет, көп дос таптым.",
+            text: "Telegram-қоғамдастығы мен үшін жаңа елдегі сенімді тірегіме айналды. Бұл жерде мен Қазақстандағы өмір туралы пайдалы ақпарат алып қана қоймай, араласуға жағымды әрі ортақ тіл табысатын адамдарды таптым. Осы чаттың арқасында бейімделу кезеңі әлдеқайда жылдам өтті және мен өзімді студенттік ортаның бір бөлігі ретінде сезіндім.",
           },
           {
             from: "Қытайдан",
-            text: "Telegram қауымдастығы өте белсенді және тез көмектеседі.",
+            text: "Этно-ауылдағы Наурыз мерекесіне бару мен үшін ұмытылмас әсер қалдырды. Біз дәстүрлі салт-жоралғыларды көріп, қымыз бен бауырсақтан дәм таттық, сондай-ақ атқа міндік. Бұл шара Қазақстан мәдениетіне тереңірек бойлауға және елді басқа қырынан тануға көмектесті.",
           },
         ],
       },

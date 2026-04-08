@@ -53,14 +53,21 @@ export default function Housing() {
               ))}
             </div>
 
-            <Button className="mt-10 gap-2">
-              {t("housing.cta")}
-            </Button>
+
+            <a
+              href={t("community.tgLink")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="mt-10 gap-2">
+                {t("housing.cta")}
+              </Button>
+            </a>
           </div>
 
           {/* Image */}
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-4/3 h-64">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-4/3 md:h-96">
               <Image
                 src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80"
                 alt="Cozy apartment in Kazakhstan"

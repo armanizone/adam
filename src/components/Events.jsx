@@ -122,6 +122,13 @@ function Countdown() {
   );
 }
 
+
+const eve = [
+  'ISSYK LAKE',
+  'NAURYZ',
+  'WINTER SKI TOUR',
+]
+
 export default function Events() {
   const { t } = useTranslation();
   const upcoming = t("events.upcoming", { returnObjects: true });
@@ -152,7 +159,7 @@ export default function Events() {
         <Countdown />
 
         {/* Upcoming Events */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3
             className="text-2xl font-bold text-gray-900 mb-8"
             style={{ fontFamily: "Syne, sans-serif" }}
@@ -196,7 +203,7 @@ export default function Events() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Past Events */}
         <div>
@@ -207,6 +214,7 @@ export default function Events() {
             {t("events.pastTitle")}
           </h3>
           <div className="grid sm:grid-cols-3 gap-6">
+            {/* {pastEventsLocalized.map((event, i) => ( */}
             {pastEventsLocalized.map((event, i) => (
               <div
                 key={i}
@@ -223,7 +231,7 @@ export default function Events() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white font-bold text-sm">{event.title}</p>
+                  <p className="text-white font-bold text-sm">{eve[i]}</p>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="bg-white/20 backdrop-blur rounded-full p-3">

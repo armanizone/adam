@@ -22,7 +22,7 @@ const socials = [
     icon: MessageCircle,
     label: "WhatsApp",
     color: "bg-green-500",
-    link: "https://wa.me/77077888677",
+    link: "https://wa.me/77067081908",
   },
 ];
 
@@ -33,7 +33,7 @@ const testimonials = [
     initials: "M",
     color: "bg-blue-100 text-blue-600",
     stars: 5,
-    text: "ADAM helped me find an apartment and understand the medical system. I felt supported from day one!",
+    text: "A trip to Oi-Qaragai was a perfect escape from the city for me. The beautiful nature, fresh air, and friendly atmosphere made it an unforgettable experience. While there, I met some local students; we’ve stayed in touch and now see each other at the university. One of them is even helping me adapt to local life.",
   },
   {
     name: "Ahmed K.",
@@ -41,7 +41,7 @@ const testimonials = [
     initials: "A",
     color: "bg-green-100 text-green-600",
     stars: 5,
-    text: "The events organized by ADAM are amazing. I made so many friends and learned about Kazakh culture.",
+    text: "The Telegram community has become my anchor in a new country. Here, I not only found useful information about life in Kazakhstan but also met people who are easy and pleasant to talk to. Thanks to this chat, my adaptation was much faster, and I truly felt like a part of the student community.",
   },
   {
     name: "Li Wei",
@@ -49,13 +49,15 @@ const testimonials = [
     initials: "L",
     color: "bg-purple-100 text-purple-600",
     stars: 5,
-    text: "The Telegram community is very active. Whenever I had a question, someone always helped within minutes.",
+    text: "The Nauryz trip to the ethno-village was an unforgettable experience for me. We witnessed traditional rituals, tasted kumys and baursaks, and even went horseback riding. This event helped me dive deeper into the culture of Kazakhstan and see the country through a different lens.",
   },
 ];
 
 export default function Community() {
   const { t } = useTranslation();
-  const testimonialsLocalized = t("community.testimonials", { returnObjects: true });
+  const testimonialsLocalized = t("community.testimonials", {
+    returnObjects: true,
+  });
 
   return (
     <section id="community" className="py-24 bg-gray-50/50">
@@ -160,14 +162,14 @@ export default function Community() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow"
+                className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow flex flex-col"
               >
                 <div className="flex text-yellow-400 mb-4">
                   {Array.from({ length: t.stars }).map((_, j) => (
                     <span key={j}>★</span>
                   ))}
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 italic">
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 italic g">
                   &quot;{testimonialsLocalized[i].text}&quot;
                 </p>
                 <div className="flex items-center gap-3">
@@ -180,7 +182,9 @@ export default function Community() {
                     <p className="font-semibold text-gray-900 text-sm">
                       {t.name}
                     </p>
-                    <p className="text-gray-400 text-xs">{testimonialsLocalized[i].from}</p>
+                    <p className="text-gray-400 text-xs">
+                      {testimonialsLocalized[i].from}
+                    </p>
                   </div>
                 </div>
               </div>

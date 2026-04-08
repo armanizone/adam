@@ -22,14 +22,49 @@ export default function Footer() {
     if (normalized.includes("telegram")) return resolveUrl("telegram");
     if (normalized.includes("instagram")) return resolveUrl("instagram");
     if (normalized.includes("whatsapp")) return resolveUrl("whatsapp");
+    // Anchor links matching navbar sections
     if (
-      normalized.includes("web") ||
+      normalized.includes("housing") ||
+      normalized.includes("жилью") ||
+      normalized.includes("тұрғын үй")
+    ) return "#housing";
+    if (
+      normalized.includes("culture") ||
+      normalized.includes("культур") ||
+      normalized.includes("мәдениет")
+    ) return "#culture";
+    if (
+      normalized.includes("healthcare") ||
+      normalized.includes("health") ||
+      normalized.includes("здравоохранение") ||
+      normalized.includes("денсаулық")
+    ) return "#healthcare";
+    if (
+      normalized.includes("event") ||
+      normalized.includes("події") ||
+      normalized.includes("события") ||
+      normalized.includes("іс-шара")
+    ) return "#events";
+    if (
+      normalized.includes("mission") ||
+      normalized.includes("миссия") ||
+      normalized.includes("миссиям") ||
+      normalized.includes("about") ||
+      normalized.includes("о нас") ||
+      normalized.includes("біз туралы")
+    ) return "#about";
+    if (normalized.includes("faq")) return "#faq";
+    if (
+      normalized.includes("team") ||
+      normalized.includes("команд") ||
+      normalized.includes("команда") ||
+      normalized.includes("командам")
+    ) return "#home";
+    if (
       normalized.includes("contact") ||
       normalized.includes("контакт") ||
       normalized.includes("байланыс")
-    ) {
-      return resolveUrl("web");
-    }
+    ) return "#contact";
     return fallbackUrl;
   };
 
@@ -103,8 +138,10 @@ export default function Footer() {
                   <li key={link}>
                     <a
                       href={resolveFooterHref(link)}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      {...(!resolveFooterHref(link).startsWith("#") && {
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                      })}
                       className="text-white/45 hover:text-[#10b981] text-sm transition-colors"
                     >
                       {link}
