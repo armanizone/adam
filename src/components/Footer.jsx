@@ -1,6 +1,7 @@
 "use client";
 
 import { Send, Instagram, MessageCircle, Heart, Globe } from "lucide-react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
@@ -75,9 +76,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-9 h-9 bg-[#1a56db] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xs">A</span>
-              </div>
+            <Image
+                src="/logo-nobg.png" // положи файл в /public
+                alt="Logo"
+                width={80}
+                height={40}
+                priority
+              />
               <span
                 className="font-bold text-xl"
                 style={{ fontFamily: "Syne, sans-serif" }}

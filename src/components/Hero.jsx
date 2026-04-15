@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="/hero.jpg"
+          src="/hero2.jpg"
           alt="Kazakhstan cityscape"
           className="w-full h-full object-cover object-center bg-cover bg-center bg-no-repeat"
           fill

@@ -19,6 +19,12 @@ export const metadata = {
   authors: [{ name: "ADAM", url: "https://adam.kz" }],
   creator: "ADAM",
   publisher: "ADAM",
+  icons: {
+    icon: [
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "192x192", type: "image/png" }
+    ]
+  },
   openGraph: {
     title: "ADAM - Adaptation Module",
     description: "ADAM is a student-led initiative dedicated to helping international, exchange, and local students adapt to life in Kazakhstan. We provide resources, organize events, and build a supportive community.",

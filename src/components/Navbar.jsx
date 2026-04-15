@@ -5,6 +5,7 @@ import { Menu, X, Globe, Users } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "../lib/utils";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,11 +61,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 bg-[#1a56db] rounded-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <span className="text-white font-bold text-xs tracking-wider">
-                A
-              </span>
-            </div>
+              <Image
+                src="/logo-nobg.png" // положи файл в /public
+                alt="Logo"
+                width={80}
+                height={40}
+                priority
+              />
             <span
               className={cn(
                 "font-bold text-lg tracking-wide transition-colors",
