@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import I18nProvider from "../components/I18nProvider";
@@ -38,9 +39,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <I18nProvider>{children}</I18nProvider>
+        
       </body>
-
-      
+      <Analytics/>
     </html>
   );
 }
