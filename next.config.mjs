@@ -3,7 +3,7 @@ const nextConfig = {
   /* config options here */
 
   images: {
-    domains: ["images.unsplash.com", "plus.unsplash.com"],
+    domains: ["images.unsplash.com", "plus.unsplash.com", "https://adam-enactus-turan.kz/"],
   },
 };
 
