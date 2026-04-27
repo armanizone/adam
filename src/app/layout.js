@@ -39,6 +39,8 @@ export default function RootLayout({ children }) {
       >
         <I18nProvider>{children}</I18nProvider>
       </body>
+
+      
     </html>
   );
 }
