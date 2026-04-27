@@ -42,15 +42,15 @@ const upcomingEvents = [
 const pastEvents = [
   {
     title: "Cultural Night 2025",
-    image: "/q.jpg",
+    image: "https://i.ibb.co.com/Fb4VtVdy/q.jpg",
   },
   {
     title: "International Food Festival",
-    image: "/e.jpg",
+    image: "https://i.ibb.co.com/67jjtvvh/e.jpg",
   },
   {
     title: "Student Networking Event",
-    image: "/w.jpg",
+    image: "https://i.ibb.co.com/7NrYNxhr/w.jpg",
   },
 ];
 

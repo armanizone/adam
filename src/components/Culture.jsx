@@ -38,7 +38,7 @@ export default function Culture() {
           {/* Image */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-4/3 md:h-96">
             <Image
-              src="/r.jpg"
+              src="https://i.ibb.co.com/R4ZXBRVR/r.jpg"
               alt="Kazakh traditional yurt on steppe"
               className="w-full h-full object-cover"
               fill
