@@ -4,6 +4,7 @@ const nextConfig = {
 
   images: {
     domains: ["images.unsplash.com", "plus.unsplash.com", "https://adam-enactus-turan.kz/"],
+    unoptimized: false
   },
 };
 
